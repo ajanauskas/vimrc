@@ -6,6 +6,8 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+colorscheme molokai
+
 if has("gui_gnome")
     set guifont=Monospace\ Bold\ 11
 elseif has("gui_mac") || has("gui_macvim")
