@@ -17,6 +17,8 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <Leader>b :CtrlPBufTag<CR>
 nnoremap <Leader>c :CtrlPClearCache<CR>
 
+syntax on
+
 map <Leader><Leader> <C-^>
 map <C-n> :NERDTreeToggle<CR>
 nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
