@@ -1,10 +1,21 @@
 runtime bundle/pathogen/autoload/pathogen.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nocompatible               "use Vim settings, rather than Vi
 filetype off
 
 call pathogen#infect()
 call pathogen#helptags()
+
+" ctrlp configuration
+let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$'
+let g:ctrlp_max_height = 15
+
+" ctrlp Mappings
+let g:ctrlp_map = ',t'
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <Leader>b :CtrlPBufTag<CR>
+nnoremap <Leader>c :CtrlPClearCache<CR>
 
 map <Leader><Leader> <C-^>
 map <C-n> :NERDTreeToggle<CR>
