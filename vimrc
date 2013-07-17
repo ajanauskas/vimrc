@@ -6,6 +6,13 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+map <Leader><Leader> <C-^>
+map <C-n> :NERDTreeToggle<CR>
+nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <C-c> :.w !pbcopy<CR><CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+
 colorscheme molokai
 
 if has("gui_gnome")
