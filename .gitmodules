@@ -13,6 +13,9 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/rking/ag.vim
-[submodule "syntastic"]
-	path = syntastic
+[submodule "bundle/solorized"]
+	path = bundle/solorized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git

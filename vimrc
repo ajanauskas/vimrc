@@ -38,6 +38,7 @@ nmap <Right> >>
 vmap <Left> <gv
 vmap <Right> >gv
 
+let &t_Co=256
 colorscheme molokai
 
 if has("gui_gnome")
