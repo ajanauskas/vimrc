@@ -7,6 +7,9 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+let mapleader = ","            "map <Leader> from \ to ,
+let maplocalleader = "/"       "map <LocalLeader> to \
+
 " ctrlp configuration
 let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$'
 let g:ctrlp_max_height = 15
@@ -17,7 +20,15 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <Leader>b :CtrlPBufTag<CR>
 nnoremap <Leader>c :CtrlPClearCache<CR>
 
-syntax on
+syntax on    " Highlight syntax
+
+set number   " Set line numbers
+
+"indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
 
 map <Leader><Leader> <C-^>
 map <C-n> :NERDTreeToggle<CR>
