@@ -2,6 +2,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nocompatible               "use Vim settings, rather than Vi
+
 filetype off
 
 call pathogen#infect()
@@ -22,7 +23,8 @@ nnoremap <Leader>c :CtrlPClearCache<CR>
 
 syntax on    " Highlight syntax
 
-set number   " Set line numbers
+set backspace=indent,eol,start "allow backspacing over everything in insert mode
+set number                     " Set line numbers
 
 "indent settings
 set shiftwidth=2
