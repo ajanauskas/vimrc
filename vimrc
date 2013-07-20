@@ -16,6 +16,19 @@ silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
 
+set backspace=indent,eol,start "allow backspacing over everything in insert mode
+set number                     " Set line numbers
+
+"indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+set ttyfast            "smoother changes
+set incsearch          "incremental search on
+set hls                "highlight search
+
 let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
 
@@ -30,15 +43,6 @@ nnoremap <Leader>b :CtrlPBufTag<CR>
 nnoremap <Leader>c :CtrlPClearCache<CR>
 
 syntax on    " Highlight syntax
-
-set backspace=indent,eol,start "allow backspacing over everything in insert mode
-set number                     " Set line numbers
-
-"indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
 
 map <Leader><Leader> <C-^>
 map <C-n> :NERDTreeToggle<CR>
