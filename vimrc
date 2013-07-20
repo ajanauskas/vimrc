@@ -8,6 +8,14 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
 let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
 
