@@ -66,6 +66,20 @@ vmap <Right> >gv
 let &t_Co=256
 colorscheme molokai
 
+" ================ Completion ========================
+set wildchar=<Tab> wildmenu wildmode=full
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+set tags+=gems.tags " ruby gems ctags
+
 if has("gui_gnome")
     set guifont=Monospace\ Bold\ 11
 elseif has("gui_mac") || has("gui_macvim")
