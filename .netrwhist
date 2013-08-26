@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/andrius/work-md'
 let g:netrw_dirhist_2='/Users/andrius/.vim/.git'
 let g:netrw_dirhist_3='/Users/andrius/.vim/colors'
 let g:netrw_dirhist_4='/Users/andrius/work-md/md-admin'
 let g:netrw_dirhist_5='/Users/andrius/work-md/md/gems/APNS'
 let g:netrw_dirhist_6='/Users/andrius/md-info'
+let g:netrw_dirhist_7='/Users/andrius/work-md/md-admin'
