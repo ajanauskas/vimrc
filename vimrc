@@ -33,7 +33,7 @@ let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
 
 " ctrlp configuration
-let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$'
+let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp\|log'
 let g:ctrlp_max_height = 15
 
 " ctrlp Mappings
