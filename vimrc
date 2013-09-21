@@ -33,7 +33,7 @@ let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
 
 " ctrlp configuration
-let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp\|log'
+let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp\|log\|bin'
 let g:ctrlp_max_height = 15
 
 " ctrlp Mappings
@@ -41,6 +41,9 @@ let g:ctrlp_map = ',t'
 nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <Leader>b :CtrlPBufTag<CR>
 nnoremap <Leader>c :CtrlPClearCache<CR>
+
+" NERDtree configuration
+let NERDTreeIgnore=['bin$', 'log$', 'tmp$']
 
 syntax on    " Highlight syntax
 
