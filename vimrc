@@ -25,6 +25,9 @@ set softtabstop=2
 set expandtab
 set autoindent
 
+"line length highlighting
+set colorcolumn=79,99
+
 set ttyfast            "smoother changes
 set incsearch          "incremental search on
 set hls                "highlight search
@@ -116,3 +119,4 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
