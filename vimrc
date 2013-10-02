@@ -26,7 +26,7 @@ set expandtab
 set autoindent
 
 "line length highlighting
-set colorcolumn=79,99
+set colorcolumn=100
 
 set ttyfast            "smoother changes
 set incsearch          "incremental search on
