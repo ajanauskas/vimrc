@@ -34,3 +34,6 @@
 [submodule "bundle/coffeescript"]
 	path = bundle/coffeescript
 	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "bundle/file-line"]
+	path = bundle/file-line
+	url = git@github.com:vim-scripts/file-line.git
