@@ -86,6 +86,13 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set tags+=gems.tags " ruby gems ctags
 
+" ==== YouCompleteMe configs
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" ==== end of YouCompleteMe config
+
 if has("gui_gnome")
     set guifont=Monospace\ Bold\ 11
 elseif has("gui_mac") || has("gui_macvim")
