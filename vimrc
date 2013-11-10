@@ -48,6 +48,10 @@ nnoremap <Leader>c :CtrlPClearCache<CR>
 " NERDtree configuration
 let NERDTreeIgnore=['bin$', 'tmp$']
 
+" easy-align condfigs
+
+vnoremap <silent> <Enter> :EasyAlign<Enter>
+
 syntax on    " Highlight syntax
 
 map <Leader><Leader> <C-^>

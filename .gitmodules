@@ -40,3 +40,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git@github.com:nono/vim-handlebars.git
+[submodule "bundle/easy-align"]
+	path = bundle/easy-align
+	url = git@github.com:junegunn/vim-easy-align.git
