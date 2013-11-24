@@ -27,6 +27,8 @@ set autoindent
 
 "line length highlighting
 set colorcolumn=100
+" syntax highlighting limited to 120 lines
+set synmaxcol=120
 
 set ttyfast            "smoother changes
 set incsearch          "incremental search on
