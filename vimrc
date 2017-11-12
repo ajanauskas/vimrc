@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim', { 'commit': 'bde7a2950adaa82e894d7bdf69e3e7383e40d229' }
+Plug 'tomasr/molokai'
 
 " Initialize plugin system
 call plug#end()
@@ -64,6 +65,7 @@ vmap <Left> <gv
 vmap <Right> >gv
 
 let &t_Co=256
+colorscheme molokai
 
 " ctrlp configuration
 let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp$\|bin$'
