@@ -1,12 +1,15 @@
-runtime bundle/pathogen/autoload/pathogen.vim
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+call plug#begin('~/.vim/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim', { 'commit': 'bde7a2950adaa82e894d7bdf69e3e7383e40d229' }
+Plug 'tomasr/molokai'
+Plug 'scrooloose/nerdtree', { 'commit': '35953042fbf5535a7e905b52a6973c3f7f8a5536' }
+
+" Initialize plugin system
+call plug#end()
 
 set nocompatible               "use Vim settings, rather than Vi
 
 filetype off
-
-call pathogen#infect()
-call pathogen#helptags()
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -37,19 +40,6 @@ set hls                "highlight search
 let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
 
-" ctrlp configuration
-let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp$\|bin$'
-let g:ctrlp_max_height = 15
-
-" ctrlp Mappings
-let g:ctrlp_map = ',t'
-nnoremap <C-b> :CtrlPBuffer<CR>
-nnoremap <Leader>b :CtrlPBufTag<CR>
-nnoremap <Leader>c :CtrlPClearCache<CR>
-
-" NERDtree configuration
-let NERDTreeIgnore=['bin$', 'tmp$']
-
 " easy-align condfigs
 
 vnoremap <silent> <Enter> :EasyAlign<Enter>
@@ -78,6 +68,16 @@ vmap <Right> >gv
 let &t_Co=256
 colorscheme molokai
 
+" ctrlp configuration
+let g:ctrlp_custom_ignore = 'node_modules\|\.git$\|\.hg$\|\.svn$\|\.swp$\|\.min\.js$|\.png$|\.jpg$|\.log$\|tmp$\|bin$'
+let g:ctrlp_max_height = 15
+
+" ctrlp Mappings
+let g:ctrlp_map = ',t'
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <Leader>b :CtrlPBufTag<CR>
+nnoremap <Leader>c :CtrlPClearCache<CR>
+
 " ================ Completion ========================
 set wildchar=<Tab> wildmenu wildmode=full
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -92,23 +92,7 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set tags+=gems.tags " ruby gems ctags
 
-" ==== YouCompleteMe configs
-
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" ==== end of YouCompleteMe config
-
-if has("gui_gnome")
-    set guifont=Monospace\ Bold\ 11
-elseif has("gui_mac") || has("gui_macvim")
-    set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h12
-elseif has("gui_win32") || has("gui_win32s")
-    set guifont=Consolas:h11
-    set enc=utf-8
-endif
-
-"go to last position when opening a file, but now when writing commit messages
+"go to last position when opening a file, but not when writing commit messages
 function! SetCursorPosition()
     if &filetype !~ 'commit\c'
         if line("'\"") > 0 && line("'\"") <= line("$")
