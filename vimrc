@@ -1,11 +1,33 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'flowtype/vim-flow', { 'commit': '4acd33aceb3c49c6872ee4f3f717802d4c73efbf' }
 Plug 'ctrlpvim/ctrlp.vim', { 'commit': 'bde7a2950adaa82e894d7bdf69e3e7383e40d229' }
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree', { 'commit': '35953042fbf5535a7e905b52a6973c3f7f8a5536' }
+Plug 'Valloric/YouCompleteMe'
+Plug 'mileszs/ack.vim', { 'commit': '36e40f9ec91bdbf6f1adf408522a73a6925c3042' }
 
 " Initialize plugin system
 call plug#end()
+
+"Flow config
+
+"Enable omnifunc
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+"Use locally installed flow
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+    let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+  let g:flow#flowpath = local_flow
+endif
+
+let g:flow#autoclose = 1
+
+"End of flow config
 
 set nocompatible               "use Vim settings, rather than Vi
 
@@ -39,6 +61,12 @@ set hls                "highlight search
 
 let mapleader = ","            "map <Leader> from \ to ,
 let maplocalleader = "/"       "map <LocalLeader> to \
+
+" silver search + ack
+"
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " easy-align condfigs
 
